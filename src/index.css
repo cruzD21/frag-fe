@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "EditorsNote";
+    src: url("/public/ednote.otf")
+}
+
+@font-face {
+    font-family: 'aeonik';
+    src: url('/public/aeonik.otf')
+}
+
+/* @font-face {
+    font-family: 'editorsnote';
+    src: url('../public/editorsnote.otf') format('otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.editorsnote {
+    font-family: editorsnote
+}
+
+.aeonik {
+    font-family: aeonik
+}*/
