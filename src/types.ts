@@ -8,6 +8,7 @@ export interface Frag {
     house_id: number
     description: string
     fraganticaID: string
+    frag_img: string
 }
 
 export interface SearchOutputResult {
