@@ -9,8 +9,8 @@ import Searchbar from "./components/Searchbar";
 export default function App() {
   
   return (
-    <div className="bg-blue-500 bg-[url('/background.jpg')] bg-cover bg-no-repeat flex items-start sm:items-center justify-center h-screen text-white">
-      <div className="text-center">
+    <div className=" bg-[url('/background.jpg')] bg-cover bg-no-repeat flex items-start sm:items-center justify-center h-screen text-white">
+      <div className="text-center mt-48 sm:m-auto ">
           <h1 className="text-4xl font-aeonik sm:text-6xl  mb-4">The Only <span className="font-editors">fragrance</span></h1>
           <h1 className="text-4xl font-aeonik sm:text-6xl">Database you need</h1>
           <div className="mt-4"> {/* Margin-top for spacing */}

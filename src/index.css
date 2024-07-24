@@ -4,12 +4,12 @@
 
 @font-face {
     font-family: "EditorsNote";
-    src: url("/public/ednote.otf")
+    src: url("/ednote.otf")
 }
 
 @font-face {
     font-family: 'aeonik';
-    src: url('/public/aeonik.otf')
+    src: url('/aeonik.otf')
 }
 
 /* @font-face {

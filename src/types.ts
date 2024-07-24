@@ -9,6 +9,7 @@ export interface Frag {
     description: string
     fraganticaID: string
     frag_img: string
+    house_name: string
 }
 
 export interface SearchOutputResult {
@@ -17,6 +18,11 @@ export interface SearchOutputResult {
     frag_description: string
     frag_house: string
     frag_img_url: string
+}
+
+export interface Note {
+    id: number
+    name: string
 }
 // [
 //     {
