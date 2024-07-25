@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import axios from "axios"
 import {  SearchOutputResult } from "../types"
 import SearchOutput from "./SearchOutput"
+import InfoPopup from "./InfoPopup"
 
 
 
@@ -9,6 +10,7 @@ import SearchOutput from "./SearchOutput"
 export default function Searchbar() {
     const [searchQuery, setSearchQuery] = useState<string>()
     const [searchOutput, setSearchOutput] = useState<SearchOutputResult[]>()
+    const [showInfo, setShowInfo] = useState(false)
 
     const handleChange = (query: string) => {
         console.log(query)
@@ -41,6 +43,12 @@ export default function Searchbar() {
                     className="outline-none  px-4 py-2 rounded-3xl w-full bg-transparent text-[#9699AB] text-xl pb-3"
                     placeholder="Quick search..."
                     onChange={(event) => handleChange(event.target.value)} />
+                <img 
+                    className=" cursor-pointer"
+                    onClick={() => setShowInfo(!showInfo)}
+                    src="/error.svg" 
+                    alt="no jalo" />
+                <InfoPopup show={showInfo} />
             </div>
             <SearchOutput results={searchOutput} input={searchQuery}/>
         </div>
