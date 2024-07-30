@@ -17,7 +17,7 @@ export default function SearchOutput({results, input}: OutputProps) {
         return null
     }
 
-    if(results?.length === 0 && input?.length > 0) {
+    if(results?.length === 0 && input?.length! > 0) {
         return <h1 className="bg-white text-black absolute top-full w-full z-10  max-h-40">No Results Found </h1>
     }
 

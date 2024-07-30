@@ -1,8 +1,7 @@
-import React from "react";
 import axios from "axios";
 
 export async function loader({params}:any) {
-    const searchOutput = await axios.get(`http://localhost:5000/search/${params.query}`)
+    const searchOutput = await axios.get(`https://frag-backend-w7rr5fd5oa-uc.a.run.app/search/${params.query}`)
   return { searchOutput };
 }
 

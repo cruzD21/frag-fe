@@ -23,7 +23,7 @@ interface FragranceNotes {
 
 
 export default function FragPage() {
-    const { data } = useLoaderData()
+    const { data }: any = useLoaderData()
     const [frag] = React.useState<Frag>(data[0])
     const [fragName, setFragName] = React.useState('');
     const [genderClass, setGenderClass] = React.useState('');
@@ -32,7 +32,7 @@ export default function FragPage() {
     React.useEffect(() => {
     // Define the regular expression to match the various end phrases
     const fetchNotes = async () => {
-      const notes = await axios.get(`http://localhost:5000/notes/${frag.fragrance_id}`)
+      const notes = await axios.get(`https://frag-backend-w7rr5fd5oa-uc.a.run.app/notes/${frag.fragrance_id}`)
       setNoteLevels(notes.data)
     }
     classifyFragGender()

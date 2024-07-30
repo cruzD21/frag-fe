@@ -19,7 +19,7 @@ export default function Searchbar() {
 
     useEffect(()=>{
         if(searchQuery != '') {
-            axios.get(`http://127.0.0.1:5000/search/${searchQuery}`)
+            axios.get(`https://frag-backend-w7rr5fd5oa-uc.a.run.app/search/${searchQuery}`)
                 .then((res) => {
                     if(res && res.data){
                         console.log(res.data)

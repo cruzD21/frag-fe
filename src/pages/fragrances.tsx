@@ -1,6 +1,6 @@
 import axios from "axios"
 import React from "react"
-import { useLoaderData } from "react-router-dom"
+// import { useLoaderData } from "react-router-dom"
 
 
 interface Fragrance {
@@ -11,8 +11,8 @@ interface Fragrance {
     fraganticaID: string
     frag_img?: string
 }
-export async function loader({params}:any) {
-    const fragrances = await axios.get("http://localhost:5000/frag")
+export async function loader() {
+    const fragrances = await axios.get("https://frag-backend-w7rr5fd5oa-uc.a.run.app/frag")
   return { fragrances };
 }
 
@@ -23,7 +23,7 @@ export default function Fragrances() {
     const [fragrances, setFragrances] = React.useState<Fragrance[]>()
 
     React.useEffect( () => {
-        axios.get("http://localhost:5000/frag")
+        axios.get("https://frag-backend-w7rr5fd5oa-uc.a.run.app/frag")
             .then((res) => {
                 if(res && res.data) {
                     console.log(res.data)
